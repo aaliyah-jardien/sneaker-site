@@ -1,0 +1,101 @@
+* {
+    box-sizing: border-box;
+    }
+    
+    #social {
+    display: flex;
+    align-items: flex-end;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 100;
+    }
+    
+    .fab {
+    font-family: "Font Awesome 5 Brands";
+    }
+    
+    .slider-bottom .slider-social {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 1111;
+    }
+    
+    .list-unstyled {
+    padding-left: 0;
+    list-style: none;
+    }
+    
+    ul {
+    padding: 0;
+    margin: 0 0 25px;
+    }
+    
+    .slider-social ul > li {
+    float: left;
+    }
+    
+    li {
+    list-style: none;
+    text-decoration: none;
+    }
+    
+    li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+    }
+    
+    .slider-bottom .slider-social a {
+    color: #464646;
+    }
+    
+    .slider-social a {
+    justify-content: center;
+    height: 40px;
+    line-height: 38px;
+    width: 40px;
+    position: relative;
+    overflow: hidden;
+    align-items: center;
+    display: flex;
+    text-align: center;
+    border-radius: 50px;
+    font-size: 16px;
+    margin: 2px;
+    border: 1px solid transparent;
+    }
+    
+    a {
+    text-decoration: none;
+    }
+    
+    .fab {
+    font-family: "Font Awesome 5 Brands";
+    display: inline-block;
+    font-style: normal;
+    }
+    
+    .fa-facebook-f:hover {
+    background: #ff0000;
+    color: #fff;
+    border: 20px solid #ff0000;
+    }
+    
+    .fa-twitter:hover {
+    background: #ff0000;
+    color: #fff;
+    border: 20px solid #ff0000;
+    }
+    
+    .fa-instagram:hover {
+    background: #ff0000;
+    color: #fff;
+    border: 20px solid #ff0000;
+    }
+    
+    .fa-linkedin-in:hover {
+    background: #ff0000;
+    color: #fff;
+    border: 20px solid #ff0000;
+    }

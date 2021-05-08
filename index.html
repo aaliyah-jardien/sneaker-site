@@ -1,0 +1,366 @@
+<!-- 
+    SNEAKER STORE PROJECT
+
+    You are tasked to replicate the following site: https://megaone.acrothemes.com/index-product-hotspot.html
+
+    Most of the HTML structure has been set up for you, however you will have to go through the document to
+    fill in the missing HTML elements and classes. I have also included the background, and 2 images for you.
+
+    If you would like to edit settings of either Owl Carousel or FullPage.js, you will need to edit the settings
+    in the scripts.js file.
+
+    Owl Carousel Options:
+    https://owlcarousel2.github.io/OwlCarousel2/docs/api-options.html
+
+    FullPage.js Options:
+    https://github.com/alvarotrigo/fullPage.js#options
+
+    I have also linked and initialized Animate On Scroll (AOS). You will need to go through the documentation
+    to apply the correct attributes to get the desired outcome.
+
+    AOS Documentation:
+    https://michalsnik.github.io/aos/
+
+    You will also have to link in your own FontAwesome kits. I have marked the area for this script with a comment
+
+    FontAwesome Icons:
+    https://fontawesome.com/icons?d=gallery&p=2&m=free
+
+    THE DEADLINE FOR THE PROJECT IS FRIDAY 7 MAY
+
+    Goodluck and have fun!
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sneaker Store</title>
+    <!-- 3rd Party CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.0/fullpage.min.css"
+      integrity="sha512-RVmrWua3k1yTDEOg4Yzs2bK5+Thh7nM6jrhDq/6/5/Mwa0JbYe4pP4YMK5sqghKz01T3DgrwYc57Jaf1PSurCg=="
+      crossorigin="anonymous"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+      integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css"
+      integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA=="
+      crossorigin="anonymous"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/2d04bbe871.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- My CSS -->
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./icons.css" />
+    <link rel="stylesheet" href="./copyright.css" />
+    <link rel="stylesheet" href="./contact-form.css" />
+  </head>
+  <body>
+    <!-- Social Bar -->
+    <div class="slider-bottom cursor-light">
+      <div class="slider-social slider-icons cursor-light">
+        <div id="social">
+          <ul class="list-unstyled">
+            <li>
+              <a href="#" class="social-icon">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="social-icon">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="social-icon">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="social-icon">
+                <i class="fab fa-instagram"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div id="fullpage">
+      <div class="section">
+        <!-- Add classes where necessary and style the section appropriately -->
+        <div id="homePage" class="content">
+          <div class="home-details">
+            <h1 class="home-heading">
+              Premium <span class="red-text">Air Max Sneakers</span>
+            </h1>
+            <p>
+              Lorem ipsum is simply dummy text of the printing and typesetting.
+              Lorem Ipsum has been the industry’s standard dummy.
+            </p>
+            <a href="#products" class="btn">View More</a>
+          </div>
+          <img src="./images/main.png" alt="Sneaker" data-tilt class="pic" />
+        </div>
+      </div>
+      <div class="section">
+        <!-- Add classes where necessary and style the section appropriately -->
+        <div id="productPage" class="content">
+          <header id="header" class="page-header-container">
+            <div class="titles">
+              <h2 class="page-heading">Premium</h2>
+              <h3 class="page-subtitle">Shoe Collection</h3>
+            </div>
+            <div class="side-items">
+              <div class="stats">
+                <span>200</span>
+                <p>Shoes Delivered</p>
+              </div>
+              <div class="stats">
+                <span>200</span>
+                <p>New Articles</p>
+              </div>
+              <div class="stats">
+                <span>200</span>
+                <p>Happy Customers</p>
+              </div>
+              <!-- Add HTML for the numbers here. They DO NOT have to animate -->
+            </div>
+          </header>
+          <!-- Product slider, please add your own classes as well to the HTML -->
+          <div id="product-slider" class="owl-carousel">
+            <!-- Product Item -->
+            <div class="product">
+              <img src="./images/pngegg(1).png" alt="Sneaker" />
+              <h3>White Chucks</h3>
+              <button onclick="openModal()" class="btn">View Detail</button>
+            </div>
+            <!-- Product Item -->
+            <div class="product">
+              <img src="./images/pngegg(2).png" alt="Sneaker" />
+              <h3>White Chucks</h3>
+              <button onclick="openModal()" class="btn">View Detail</button>
+            </div>
+            <!-- Product Item -->
+            <div class="product">
+              <img src="./images/pngegg(4).png" alt="Sneaker" />
+              <h3>White Chucks</h3>
+              <button onclick="openModal()" class="btn">View Detail</button>
+            </div>
+            <!-- Product Item -->
+            <div class="product">
+              <img src="./images/new.png" alt="Sneaker" />
+              <h3>White Chucks</h3>
+              <button onclick="openModal()" class="btn">View Detail</button>
+            </div>
+          </div>
+          <div id="modal">
+            <div class="shoes">
+              <img
+                src="./images/pngegg(1).png "
+                class="main-pic"
+                alt="Sneaker"
+              />
+              <div class="sneakers">
+                <img src="./images/pngegg(2).png" alt="small" />
+                <img src="./images/new.png" alt="smlly" />
+                <img src="./images/pngegg(4).png" alt="smaller" />
+              </div>
+            </div>
+
+            <div class="modal-content-container">
+              <div class="modal-content"></div>
+              <div class="modal-info">
+                <h1 class="modal-heading">Article PZ-100-23</h1>
+                <h2 class="modal-subtitle">White Chucks</h2>
+                <p class="modal-description">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum
+                  quidem aliquam in rerum incidunt autem itaque laborum ullam
+                  unde eaque amet quia ipsam doloremque repellat hic, deleniti
+                  et fuga sunt?
+                </p>
+                <div class="size-selector">
+                  <div class="size-selector-text">Size:</div>
+                  <div class="sizes">
+                    <span class="size-number">38</span>
+                    <span class="size-number">39</span>
+                    <span class="size-number">40</span>
+                    <span class="size-number">41</span>
+                    <span class="size-number">42</span>
+                    <span class="size-number">43</span>
+                    <span class="size-number">44</span>
+                    <span class="size-number">45</span>
+                  </div>
+                </div>
+                <div class="selectors">
+                  <div class="qauntity-title">Qty:</div>
+                  <div class="qauntity">
+                    <span class="minus">-</span>
+                    <input type="number" placeholder="1" />
+                  </div>
+                  <span class="plus">+</span>
+                  <div class="color-title">Color:</div>
+                  <div class="colors">
+                    <span class="color1"></span>
+                    <span class="color2"></span>
+                    <span class="color3"></span>
+                  </div>
+                </div>
+                <div class="price">$200</div>
+                <!-- <div class="buy-button"> -->
+                <a href="#" target="_blank" class="buy-button">BUY NOW</a>
+                <!-- </div> -->
+              </div>
+            </div>
+            <button onclick="openModal()" class="close">X</button>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div id="testimonialPage" class="content">
+          <!-- Page header -->
+          <header ID="header3" class="page-header-container">
+            <h2 id="small-head" class="page-heading">Best In Business</h2>
+            <h3 class="page-subtitle">Happy Customers</h3>
+          </header>
+          <div id="testimonial-slider" class="owl-carousel">
+            <!-- The content for the testimonials has been created using JavaScript. 
+                Please go to the inspect tool to see which classes were used to build the slider, 
+                and use the classnames given to style them in your CSS sheet -->
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div id="contactPage" class="content">
+          <!-- Page header -->
+          <div class="box1">
+            <header class="page-header-container">
+              <h2 class="page-heading2">Questions?</h2>
+              <h3 class="page-subtitle">Let's get in touch</h3>
+            </header>
+
+            <!-- Contact Details -->
+
+            <div class="contact-details-container">
+              <h4 class="contact-details-heading">Warehouse Location</h4>
+              <p class="contact-details-description">
+                There are many variations of passages of Lorem Ipsum available,
+                but the majority have suffered .
+              </p>
+              <!-- Please insert location, contact numbers and email elements here -->
+              <div class="con-info">
+                <div class="con-info-sub">
+                  <i class="fas fa-map-marker-alt con-info-icon"> </i>
+                  <p class="con-info-text">
+                    123 Park Avenue, New York, United States
+                  </p>
+                </div>
+                <div class="con-info-sub">
+                  <i class="fas fa-phone-volume con-info-icon"></i>
+                  <p class="con-info-text">+1 631 1234 5678 +1 631 1234 5678</p>
+                </div>
+                <div class="con-info-sub">
+                  <i class="fas fa-paper-plane con-info-icon"></i>
+                  <p class="con-info-text">email@website.com</p>
+                </div>
+              </div>
+
+              <div class="icons-contact">
+                <a href="#"><i class="fab fa-twitter icon_btm"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in icon_btm"></i></a>
+                <a href="#"><i class="fab fa-instagram icon_btm"></i></a>
+                <a href="#"><i class="fab fa-facebook-f icon_btm"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Create new form on FORMSPREE and insert ULR in the ACTION ATTRIBUTE -->
+          <form
+            id="contact-form"
+            action="https://formspree.io/f/mknkoknp"
+            method="POST"
+          >
+            <input
+              class="contact-input"
+              type="text"
+              name="full_name"
+              id="full_name"
+              placeholder="Name"
+              required
+            />
+            <input
+              class="contact-input"
+              type="tel"
+              name="contact_no"
+              id="contact_no"
+              placeholder="Contact No"
+              required
+            />
+            <input
+              class="contact-input"
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Email"
+              required
+            />
+            <textarea
+              class="contact-input-msg"
+              name="message"
+              id="message"
+              placeholder="Type your message here"
+            ></textarea>
+            <button class="button" type="submit">Submit Information</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="copy-right">
+      <span>©MegaOne 2020.</span>
+    </div>
+
+    <!-- External Scripts -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+      integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.0/fullpage.min.js"
+      integrity="sha512-HqbDsHIJoZ36Csd7NMupWFxC7e7aX2qm213sX+hirN+yEx/eUNlZrTWPs1dUQDEW4fMVkerv1PfMohR1WdFFJQ=="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.extensions.min.js"
+      integrity="sha512-0xW5KFMtT462F65vVvIejNawM1U2Fp/yhItmQVFUwdYP+R9tQFCn4QtLEhkp6RoGovZ6YCvbxy+GVCtGv0+nvA=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+      integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+
+    <!-- My Javascript File -->
+    <script src="./scripts.js"></script>
+  </body>
+</html>

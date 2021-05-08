@@ -1,0 +1,9 @@
+.copy-right {
+  font-family: sans-serif;
+  font-weight: normal;
+  font-size: 18px;
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  z-index: 1111;
+}
